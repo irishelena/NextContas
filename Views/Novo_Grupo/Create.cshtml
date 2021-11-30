@@ -1,0 +1,78 @@
+﻿@model NextConta.Models.Novo_Grupo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Crie seu grupo</h1>
+
+
+<hr />
+<div class="row">
+    <form asp-action="Create">
+    <div class="col-md-6 mb-3">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Nome" class="control-label">Nome</label>
+            <input asp-for="Nome" class="form-control" />
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-6 mb-3">
+        <div class="form-group">
+            <label asp-for="Categoria" class="control-label">Categoria</label>
+            <input asp-for="Categoria" class="form-control" />
+            <span asp-validation-for="Categoria" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-6 mb-3">
+        <div class="form-group">
+            <label asp-for="Descricao" class="control-label">Descrição</label>
+            <input asp-for="Descricao" class="form-control" />
+            <span asp-validation-for="Descricao" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-6 mb-3">
+        <div class="form-group">
+            <label asp-for="ValorInt" class="control-label">Valor Total</label>
+            <input asp-for="ValorInt" class="form-control" />
+            <span asp-validation-for="ValorInt" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-6 mb-3">
+        <div class="form-group">
+            <label asp-for="QtdTelas" class="control-label">Quantidade de Telas</label>
+            <input asp-for="QtdTelas" class="form-control" />
+            <span asp-validation-for="QtdTelas" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-6 mb-3">
+        <div class="form-group">
+            <label asp-for="TelasDisponiveis" class="control-label">Telas Disponiveis</label>
+            <input asp-for="TelasDisponiveis" class="form-control" />
+            <span asp-validation-for="TelasDisponiveis" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-6 mb-3">
+        <div class="form-group">
+            <label asp-for="ValorPessoa" class="control-label">Valor por pessoa</label>
+            <input asp-for="ValorPessoa" class="form-control" />
+            <span asp-validation-for="ValorPessoa" class="text-danger"></span>
+        </div>
+    </div>
+    
+        <div class="form-group">
+            <input type="submit" value="Salvar" class="btn btn-primary" />
+        </div>
+    
+
+</form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<NextConta.Models.Nova_conta>
+
+@{
+    ViewData["Title"] = "Perfil";
+}
+
+<h1>Perfil</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Nome
+            </th>
+            <th>
+               Sobrenome
+            </th>
+            <th>
+                Celular
+            </th>
+            <th>
+                Email
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sobrenome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Celular)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

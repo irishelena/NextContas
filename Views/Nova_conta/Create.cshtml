@@ -1,0 +1,143 @@
+﻿@model NextConta.Models.Nova_conta
+
+@{
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    ViewBag.Title = "Nova Conta";
+}
+<html class="no-js">
+<link rel="shortcut icon" href="~/img/favicon.png" type="image/x-icon">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NextContas - Nova Conta</title>
+
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='~/text/css'>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="~/favicon.png" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/fontello.css">
+    <link href="~/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+    <link href="~/fonts/icon-7-stroke/css/helper.css" rel="stylesheet">
+    <link href="~/css/animate.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="~/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="~/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/icheck.min_all.css">
+    <link rel="stylesheet" href="~/css/price-range.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/css/owl.theme.css">
+    <link rel="stylesheet" href="~/css/owl.transitions.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/responsive.css">
+</head>
+<body>
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <!-- Body content -->
+
+
+    <div class="header-connect">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-sm-8  col-xs-12">
+                    <div class="header-half header-call">
+                        <p>
+                            <span><i class="pe-7s-mail"></i> contato@nextconta.com.br</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <h2>Crie sua conta.</h2>
+
+
+    <div class="row justify-content-center">
+        <form asp-action="Create" style="background-color: rgb(249, 249, 249);">
+            <div class="col-md-4 mb-3">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Nome" class="control-label">Nome</label>
+                    <input asp-for="Nome" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="form-group">
+                    <label asp-for="Sobrenome" class="control-label">Sobrenome</label>
+                    <input asp-for="Sobrenome" class="form-control" />
+                    <span asp-validation-for="Sobrenome" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="form-group">
+                    <label asp-for="DataNascimento" class="control-label">Data de Nascimento</label>
+                    <input asp-for="DataNascimento" class="form-control" />
+                    <span asp-validation-for="DataNascimento" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="form-group">
+                    <label asp-for="Celular" class="control-label">Celular</label>
+                    <input asp-for="Celular" class="form-control" />
+                    <span asp-validation-for="Celular" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4 mb-6">
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label">E-mail</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Senha" class="control-label">Senha</label>
+                    <input asp-for="Senha" class="form-control" />
+                    <span asp-validation-for="Senha" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-pull-4">
+                <div class="form-group">
+                    <input type="submit" value="Salvar" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+    
+
+    <script src="~/js/modernizr-2.6.2.min.js"></script>
+
+    <script src="~/js/jquery-1.10.2.min.js"></script>
+    <script src="~/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/js/bootstrap-select.min.js"></script>
+    <script src="~/js/bootstrap-hover-dropdown.js"></script>
+
+    <script src="~/js/easypiechart.min.js"></script>
+    <script src="~/js/jquery.easypiechart.min.js"></script>
+
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/wow.js"></script>
+
+    <script src="~/js/icheck.min.js"></script>
+    <script src="~/js/price-range.js"></script>
+
+    <script src="~/js/main.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

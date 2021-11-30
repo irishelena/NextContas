@@ -1,0 +1,71 @@
+﻿@model IEnumerable<NextConta.Models.Novo_Grupo>
+
+@{
+    ViewData["Title"] = "Grupos";
+}
+
+<h1>Grupos</h1>
+
+<p>
+    <a asp-action="Create">Novo Grupo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Nome
+            </th>
+            <th>
+               Categoria
+            </th>
+            <th>
+                Descrição
+            </th>
+            <th>
+                Valor Inteiro
+            </th>
+            <th>
+                Quantidade de Telas
+            </th>
+            <th>
+                Telas Disponiveis
+            </th>
+            <th>
+                Valor por Pessoa
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorInt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QtdTelas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelasDisponiveis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorPessoa)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

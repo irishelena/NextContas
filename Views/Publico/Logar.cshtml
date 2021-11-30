@@ -1,0 +1,158 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm())
+
+{
+    @Html.AntiForgeryToken()
+
+
+    <!DOCTYPE html>
+    <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <html class="no-js">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>NextContas - Homepage</title>
+
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='~/text/css'>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" href="~/favicon.png" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="~/css/normalize.css">
+        <link rel="stylesheet" href="~/css/font-awesome.min.css">
+        <link rel="stylesheet" href="~/css/fontello.css">
+        <link href="~/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+        <link href="~/fonts/icon-7-stroke/css/helper.css" rel="stylesheet">
+        <link href="~/css/animate.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="~/css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="~/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="~/css/icheck.min_all.css">
+        <link rel="stylesheet" href="~/css/price-range.css">
+        <link rel="stylesheet" href="~/css/owl.carousel.css">
+        <link rel="stylesheet" href="~/css/owl.theme.css">
+        <link rel="stylesheet" href="~/css/owl.transitions.css">
+        <link rel="stylesheet" href="~/css/style.css">
+        <link rel="stylesheet" href="~/css/responsive.css">
+    </head>
+    <body>
+
+        <div id="preloader">
+            <div id="status">&nbsp;</div>
+        </div>
+        <!-- Body content -->
+
+
+        <div class="header-connect">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-8  col-xs-12">
+                        <div class="header-half header-call">
+                            <p>
+                                <span><i class="pe-7s-mail"></i> contato@nextconta.com.br</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End top header -->
+
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse yamm" id="navigation">
+                    <div class="button navbar-right">
+                        <a asp-area="" asp-controller="Nova_Conta" asp-action="Create">Criar sua conta</a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- End page header -->
+        <!-- register-area -->
+        <div class="register-area" style="background-color: rgb(249, 249, 249);">
+            <h3 class="text-center">@ViewBag.Error</h3>
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="container">
+                <div class="col-md-6 order-md-2">
+                    <img src="~/img/view.png" alt="Image" class="img-fluid">
+                </div>
+
+                <div class="col-md-6 contents">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-xs-12 login-blocks">
+                            <h2>Login : </h2>
+                            <form action="#" method="post">
+                                <div class="form-group">
+                                    <label for="username">Email</label>
+                                    <input type="text" class="form-control" name="email" id="email" placeholder="Digite seu e-mail" required="required" style="font-style: italic; font-size:13px;">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Senha</label>
+                                    <input type="password" class="form-control" name="senha" id="password" placeholder="Digite sua senha" required="required" style="font-style: italic; font-size:13px;">
+                                </div>
+                                <div class="text-center">
+                                    <input type="submit" value="Log In" class="btn btn-block btn-primary">
+                                </div>
+                            </form>
+                            <br>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer area-->
+
+
+        <script src="~/js/modernizr-2.6.2.min.js"></script>
+
+        <script src="~/js/jquery-1.10.2.min.js"></script>
+        <script src="~/bootstrap/js/bootstrap.min.js"></script>
+        <script src="~/js/bootstrap-select.min.js"></script>
+        <script src="~/js/bootstrap-hover-dropdown.js"></script>
+
+        <script src="~/js/easypiechart.min.js"></script>
+        <script src="~/js/jquery.easypiechart.min.js"></script>
+
+        <script src="~/js/owl.carousel.min.js"></script>
+        <script src="~/js/wow.js"></script>
+
+        <script src="~/js/icheck.min.js"></script>
+        <script src="~/js/price-range.js"></script>
+
+        <script src="~/js/main.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
+}

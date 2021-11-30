@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<!-- Place favicon.ico  the root directory -->
+<link rel="shortcut icon" href="~/img/favicon.png" type="image/x-icon">
+<link rel="icon" href="~/img/favicon.png" type="image/x-icon">
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+
+
